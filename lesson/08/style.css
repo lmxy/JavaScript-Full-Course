@@ -1,0 +1,43 @@
+/*  There is a tiny magic with CSS3 flexboxes */
+
+/* Important */
+section {
+    display: flex;
+}
+section p {
+    /* Key Part */
+    margin: auto;
+}
+
+
+/* Unimportant, coloring and UI */
+section {
+    height: 200px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    border: 3px solid orange;
+    background-color: gold;
+}
+section p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+label {
+    display: block;
+    text-align: center;
+    font-size: 20px; 
+}
+
+button {
+    font-size: 28px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-left: 5px;
+}
