@@ -8,14 +8,14 @@ shuffle(cards);
 
 function shuffle(array){
   let currentIndex =array.length;
+  console.log(array);
 
   while(currentIndex != 0){
     let randomIndex = Math.floor(Math.random() * array.length);
-    console.log(randomIndex);
     currentIndex-=1;
 
-    let temp = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
+    let temp = array[currentIndex]; 
+    array[currentIndex] = array[randomIndex]; // randomIndex cloud be the same with currentIndex, just swap every card with a randam card
     array[randomIndex] = temp;
   }
   return array;
