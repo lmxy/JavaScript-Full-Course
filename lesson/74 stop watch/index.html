@@ -9,15 +9,15 @@
     <meta http-equiv="refresh" content="1s">
 
     <link rel="stylesheet" href="style.css">
-    <title>73 cookie</title>
+    <title>74 stop watch</title>
   </head>
   <body>
-    <label for="firstText">first name:</label>
-    <input id="firstText" type="text"><br>
-    <label for="lastText">last name:</label>
-    <input id="lastText" type="text"><br>
-    <button id="submitBtn">submit</button>
-    <button id="cookieBtn">get cookies</button>
+    <div id="timeContainer">
+      <div id="timeDisplay">00:00:00</div>
+      <button id="startBtn" class="timerBtn">Start</button>
+      <button id="pauseBtn" class="timerBtn">Pause</button>
+      <button id="resetBtn" class="timerBtn">Reset</button>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
