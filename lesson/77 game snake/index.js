@@ -97,9 +97,69 @@ function changeDirection(event){
   const UP = 38;
   const RIGHT = 39;
   const DOWN = 40;
+
+  const goingUp = (yVeloctiy == -unitSize);
+  const goingDown = (yVeloctiy == unitSize);
+  const goingRight = (xVelocity == unitSize);
+  const goingLeft = (xVelocity == -unitSize);
   
-  const goingUP = ()
+  switch(true){
+    case(keyPressed == LEFT && !goingRight):
+      xVelocity = -unitSize;
+      yVeloctiy = 0;
+      break;
+    case(keyPressed == UP && !goingDown):
+      xVelocity = 0;
+      yVeloctiy = -unitSize;
+      break;
+    case(keyPressed == RIGHT && !goingLeft):
+      xVelocity = unitSize;
+      yVeloctiy = 0;
+      break;
+    case(keyPressed == DOWN && !goingUp):
+      xVelocity = 0;
+      yVeloctiy = unitSize;
+      break;
+  }
+  for(let i = 1; i < snake.length; i+=1){
+    if(snake[i].x == snake[0].x && snake[i].y == snake[0].y){
+      running =false;
+    }
+  }
+
 };
-function checkGameOver(){};
-function displayGameOver(){};
-function resetGame(){};
+function checkGameOver(){
+  switch(true){
+    case (snake[0].x < 0):
+      running = false;
+      break;
+    case (snake[0].x >= gameWidth):
+      running = false;
+      break;
+    case (snake[0].y < 0):
+      running = false;
+      break;
+    case (snake[0].y >= gameHeight):
+      running = false;
+      break;
+  }
+};
+function displayGameOver(){
+  ctx.font = "50px MV Boli";
+  ctx.fillStyle = "black";
+  ctx.textAlign = "center";
+  ctx.fillText("GAME OVER!", gameWidth / 2, gameHeight / 2);
+};
+function resetGame(){
+  score = 0;
+  xVelocity = unitSize;
+  yVeloctiy = 0;
+  snake = [
+    {x:unitSize * 4, y:0},
+    {x:unitSize * 3, y:0},
+    {x:unitSize * 2, y:0},
+    {x:unitSize, y:0},
+    {x:0, y:0}
+  ];
+  gameStart();
+};
