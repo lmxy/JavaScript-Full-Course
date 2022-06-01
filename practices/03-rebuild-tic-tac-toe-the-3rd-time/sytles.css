@@ -1,0 +1,14 @@
+#cells {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+}
+#grids-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  width: 450px;
+
+
+
+}
+
