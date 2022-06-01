@@ -1,14 +1,30 @@
 #cells {
   width: 150px;
   height: 150px;
-  border: 1px solid black;
+  border: 2px solid;
+  box-shadow: 0 0 0 2px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+
 }
 #grids-container {
   display: grid;
-  grid-template-columns: repeat(3, 33.33%);
+  grid-template-columns: 1fr 1fr 1fr; /* 此处会影响边框， 不知道原因 auto和fr有一样的效果*/
   width: 450px;
-
-
-
+  margin: auto;
+}
+#gameBoard {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+#restartBtn {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+}
+#statusText {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
 }
 
